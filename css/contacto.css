@@ -1,0 +1,143 @@
+
+.app-contenido h1{
+    text-align: center;
+}
+#contacto{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin:0 auto;
+    position:relative;
+    width:90%;
+}
+.formulario input,.formulario textarea, .formulario select, .formulario button{
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-size: 18px;
+    height: 44px;
+    margin-bottom: 24px;
+    padding-left: 10px;
+    transition: all 300ms ease-in-out 0s;
+    width: 100%;
+}
+
+.formulario input:active ,.formulario textarea:active{
+    border:1px solid #0f8f32;
+}
+.formulario textarea{
+    display: block;
+    font-weight:inherit;
+    height: 150px;
+    padding-top: 12px;
+}
+
+.clearfix {
+    *zoom : 1;
+}
+.clearfix:before,.clearfix:after {
+    content : "";
+    display: table;
+}
+.clearfix:after {
+    clear : both;
+}
+.msg{
+    display: none;
+}
+.error, .confirma{  
+    border-radius: 8px;
+    display:block;
+    font-size: 1.5rem;    
+    line-height: 1.5rem;
+    margin: 40% auto 0 auto;
+    min-height: 100px;
+    padding: 12px 15px;
+    position: relative;
+    text-align: center;
+    width: 90%;    
+    z-index: 9999;
+}
+.error{
+    background: #f4cac8;
+    border: 1px solid #eba19e;
+    color: #da4f49;
+}
+.confirma{
+    background-color: #a7e0b6;
+    border: 1px solid #78c18b;
+    color: #097c27;
+}
+.confirma .respuesta, .error .respuesta {
+    display: block;
+    font-size: 1.8rem;
+    margin-top: 4%;
+}
+.error .exit, .confirma .exit {
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: bold;
+    height: 28px;
+    padding: 2px 0 0 2px;
+    position: absolute;
+    right: -10px;
+    top: -10px;   
+    width: 28px;
+}
+.confirma .exit{
+    background-color: #097c27;
+    color: #fff;
+}
+.error .exit{
+    background: #da4f49;
+    color: #fff;
+}
+input:required:invalid, textarea:required:invalid, select:required:invalid{
+    -moz-box-shadow: 0px 0px 5px red;
+    -webkit-box-shadow: 0px 0px 5px red;
+    border:1px solid red;
+    box-shadow:0px 0px 5px red;
+    color:darkred;
+    outline: 2px;
+}
+input:required:valid, textarea:required:valid, select:required:valid{
+    -moz-box-shadow: 0px 0px 5px #0084ff;
+    -webkit-box-shadow: 0px 0px 5px #0084ff;
+    border:1px solid #0084ff;
+    box-shadow:0px 0px 5px #0084ff;
+    color:darkgreen;
+    outline: 2px;
+}
+input:focus, textarea:focus{
+    border:1px solid black;
+}
+.opaco{
+    background-color: rgba(0,0,0,.85);
+    bottom:0;
+    display: none;
+    left:0;    
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top:0;
+}
+.loading{
+    display: block;
+    margin:0 auto;
+    padding-top: 75%;
+    position: relative;
+    width:123px;
+}
+
+@media (min-width:992px){
+    #contacto{
+        width: 60%;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+    }
+    #contacto button{
+        width: 30%;
+        float:right;
+    }
+    .loading{
+        padding-top:50%;
+    }
+}
